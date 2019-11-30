@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Dimension V2",
-    author: "Hunter Chang",
+    title: "Frankie Rodriguez Portfolio",
+    author: "Frankie Rodriguez",
     description: "A Gatsby.js V2 Starter based on Dimension by HTML5 UP"
   },
   plugins: [
@@ -12,8 +12,8 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#990815',
+        theme_color: '#990815',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
@@ -21,4 +21,4 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-offline'
   ],
-}
+};
