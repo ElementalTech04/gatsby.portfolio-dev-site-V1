@@ -29,12 +29,12 @@ class Contact extends React.Component{
             </form>
             <ul className="icons">
                 <li>
-                    <a href="mailto:rfrankie04@gmail.com" className="icon fa-at" target="_blank">
+                    <a href="mailto:rfrankie04@gmail.com" className="icon fa-at" target="_blank" rel="noopener noreferrer" >
                         <span className="label">Email</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/frankierodriguezjr/" className="icon fa-linkedin" target="_blank">
+                    <a href="https://www.linkedin.com/in/frankierodriguezjr/" className="icon fa-linkedin" target="_blank" rel="noopener noreferrer" >
                         <span className="label">Linkedin</span>
                     </a>
                 </li>
@@ -43,6 +43,7 @@ class Contact extends React.Component{
                         href="https://github.com/ghost1497"
                         className="icon fa-github"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <span className="label">GitHub</span>
                     </a>
