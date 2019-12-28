@@ -17,6 +17,9 @@
 		max-width: 100%;
 		z-index: 3;
 		display: none;
+		h3{
+			font-size: 22px;
+		}
 
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');

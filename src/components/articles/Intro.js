@@ -1,35 +1,31 @@
 import React from "react";
-import pic01 from "../../images/pic01.jpg";
+import pic01 from "../../images/gradient.jpg";
 
 
 const Intro = () => {
     return (
         <div>
-            <h2 className="major">Intro</h2>
+            <h2 className="major">About</h2>
             <span className="image main">
         <img src={pic01} alt=""/>
         </span>
+            <h3>PRESENT EMPLOYMENT</h3>
             <p>
-                Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-                convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-                magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-                By the way, check out my <a href="#work">awesome work</a>.
+                Frankie Rodriguez is an Associate Software Engineer at Corporation Service Company (CSC). His position is of a full stack nature, working daily on an internal application that is made up a stack that includes an Angular front end, Spring
+                API, and an Oracle Database.
             </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-                libero eu nibh porttitor fermentum. Nullam venenatis erat id
-                vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-                Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-                dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-                lectus. Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. In non lorem sit amet elit
-                placerat maximus. Pellentesque aliquam maximus risus, vel sed
-                vehicula.
-            </p>
-
+            <h3>BECOMING A SOFTWARE ENGINEER</h3>
+            <p>While attending Lehigh University, Frankie majored in Computer Engineering. This major is an
+                interdisciplinary
+                between Computer Science and Electrical Engineering with an emphasis on the Electrical Engineering
+                side. After doing well in his first programming class in junior year, he wanted to switch majors in
+                order
+                to focus solely on Computer Science but that was going to be a difficult feat since he was so far into
+                his
+                college career. </p><p>Fear Not! </p><p>Frankie was fortunate enough to have
+            the opportunity to attend <a href="https://www.zipcodewilmington.com" target="_blank">Zip Code Wilmington</a>, a vigorous 12-week coding boot camp that aims to turn
+            students
+            into full stack developers by the end of the program. He spent </p>
         </div>
     );
 };

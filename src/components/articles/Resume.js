@@ -1,14 +1,51 @@
 import React from "react";
-import pic02 from "../../images/pic02.jpg";
-import pic03 from "../../images/pic03.jpg";
+import {Page} from 'react-pdf';
+import doc from "../../images/Resume_12_2019.pdf";
+import {Document} from 'react-pdf/dist/entry.webpack';
+import {useState, useEffect} from 'react';
+
+export const pageNum = 1;
 
 const Resume = () => {
-    return(<div>
+    let scale = useWindowDimensions();
+    return (<div>
         <h2 className="major">Resume</h2>
-        <p>
-            printout
-        </p>
-    </div>);
+        <Document file={doc}>
+            <Page pageNumber={pageNum} scale={scale}/>
+        </Document>
+        <a href={doc} download>Download</a>
+    </div>)
+};
+
+
+const getWindowDimensions = () => {
+    const {innerWidth: width, innerHeight: height} = window;
+    return {
+        width,
+        height
+    };
+};
+
+const useWindowDimensions = () => {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    let scale;
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    if (windowDimensions.width < 500) {
+        scale = 0.5;
+    } else {
+        scale = 0.9
+    }
+
+    return scale;
 };
 
 export default Resume;

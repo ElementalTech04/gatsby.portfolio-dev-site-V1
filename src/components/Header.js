@@ -14,19 +14,19 @@ const Header = (props) => (
         </div>
         <nav>
             <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Intro</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Projects</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('resume')}}>Resume</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('book')}}>Book Me</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><button className="menu-buttons" onClick={() => {props.onOpenArticle('intro')}}>Intro</button></li>
+                <li><button className="menu-buttons" onClick={() => {props.onOpenArticle('work')}}>Projects</button></li>
+                <li><button className="menu-buttons" onClick={() => {props.onOpenArticle('resume')}}>Resume</button></li>
+                <li><button className="menu-buttons" onClick={() => {props.onOpenArticle('book')}}>Book Me</button></li>
+                <li><button className="menu-buttons" onClick={() => {props.onOpenArticle('contact')}}>Contact</button></li>
             </ul>
         </nav>
     </header>
-)
+);
 
 Header.propTypes = {
     onOpenArticle: PropTypes.func,
     timeout: PropTypes.bool
-}
+};
 
 export default Header
