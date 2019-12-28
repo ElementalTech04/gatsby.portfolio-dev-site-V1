@@ -11,6 +11,7 @@
 		border: solid _size(border-width) _palette(border);
 		margin-bottom: _size(element-margin);
 		padding: 1.5em;
+		min-width: 50%;
 
 		> :last-child,
 		> :last-child > :last-child,
