@@ -23,7 +23,7 @@ const Intro = () => {
                 to focus solely on Computer Science but that was going to be a difficult feat since he was so far into
                 his
                 college career. </p><p>Fear Not! </p><p>Frankie was fortunate enough to have
-            the opportunity to attend <a href="https://www.zipcodewilmington.com" target="_blank">Zip Code Wilmington</a>, a vigorous 12-week coding boot camp that aims to turn
+            the opportunity to attend <a href="https://www.zipcodewilmington.com" target="_blank" rel="noopener noreferrer" >Zip Code Wilmington</a>, a vigorous 12-week coding boot camp that aims to turn
             students
             into full stack developers by the end of the program. He spent </p>
         </div>
