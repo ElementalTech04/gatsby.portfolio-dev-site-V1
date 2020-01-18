@@ -27,6 +27,7 @@ button,
   line-height: _size(element-height);
   outline: 0;
   padding: 0 1.25rem 0 (1.25rem + (_font(letter-spacing) * 0.5));
+  margin: 2%;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -78,4 +79,6 @@ input[type="button"],
 button {
   line-height: calc(#{_size(element-height)} - 2px);
 }
+
+
 

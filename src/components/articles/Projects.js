@@ -11,7 +11,8 @@ class Projects extends React.Component {
                 name: '',
                 desc: '',
                 gitHubLink: '',
-                img: ''
+                img: '',
+                siteLink: '',
             }
         }
     }
@@ -23,7 +24,6 @@ class Projects extends React.Component {
     }
 
 
-
     render() {
         return (<div>
             <h2 className="major">Projects</h2>
@@ -32,14 +32,22 @@ class Projects extends React.Component {
                     .keys(this.state.posts)
                     .map(key => <div className="box">
                         <h1>{this.state.posts[key].name}</h1>
-                        <img src={this.state.posts[key].img} alt=""/>
+                        <img className="image fit" src={require('../../images/' + this.state.posts[key].img)}
+                             alt="img"/>
                         <p>{this.state.posts[key].desc}</p>
-                        <a href={this.state.posts[key].gitHubLink} target="_blank">Git Hub Project</a>
+                        <div className="button-container">
+                            <a className="button" href={this.state.posts[key].gitHubLink} target="_blank">Git Hub
+                                Project</a>
+                            {
+                                this.state.posts[key].siteLink ?
+                                    <a className="button" href={this.state.posts[key].siteLink} target="_blank">Website
+                                        Link</a> : null
+                            }
+                        </div>
                     </div>)}
             </div>
         </div>);
     }
 }
-
 
 export default Projects;
