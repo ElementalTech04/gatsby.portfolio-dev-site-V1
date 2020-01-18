@@ -1,6 +1,22 @@
 import React from "react";
 
 class Contact extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {name: '', email: '', message: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({name: event.target.name, email: event.target.email, message: event.target.message});
+    }
+
+    handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
+    }
 
     render(){
         return(<div>

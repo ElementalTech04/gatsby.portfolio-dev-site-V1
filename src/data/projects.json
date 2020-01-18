@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Visit Delaware",
+    "desc": "Mobile Application made with the Ionic framework and a Spring Boot backend alongside a PostGreSQL database. Visit Delaware functions as a travel itinerary app for the state of Delaware. Awarded the first place \"Innovation Award\" in the Open Data Challenge.",
+    "gitHubLink": "https://github.com/ghost1497/ZipCodeOpenDataChallenge",
+    "img": "../../images/LOGOLOGO.png"
+  },
+  {
+    "name": "FR PROGRAMMING",
+    "desc": "desc",
+    "gitHubLink": "https://github.com/ghost1497/Portfolio-Gatsby-Starter",
+    "img": "../../images/frprogramming.png"
+  },
+  {
+    "name": "FR PROGRAMMING",
+    "desc": "desc",
+    "gitHubLink": "https://github.com/ghost1497/Portfolio-Gatsby-Starter",
+    "img": "../../images/frprogramming.png"
+  },
+  {
+    "name": "FR PROGRAMMING",
+    "desc": "desc",
+    "gitHubLink": "https://github.com/ghost1497/Portfolio-Gatsby-Starter",
+    "img": "../../images/frprogramming.png"
+  }
+]
