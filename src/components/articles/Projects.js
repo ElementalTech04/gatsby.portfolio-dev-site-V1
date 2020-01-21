@@ -36,11 +36,11 @@ class Projects extends React.Component {
                              alt="img"/>
                         <p>{this.state.posts[key].desc}</p>
                         <div className="button-container">
-                            <a className="button" href={this.state.posts[key].gitHubLink} target="_blank">Git Hub
+                            <a className="button" href={this.state.posts[key].gitHubLink} target="_blank" rel="noopener noreferrer" >Git Hub
                                 Project</a>
                             {
                                 this.state.posts[key].siteLink ?
-                                    <a className="button" href={this.state.posts[key].siteLink} target="_blank">Website
+                                    <a className="button" href={this.state.posts[key].siteLink} target="_blank" rel="noopener noreferrer" >Website
                                         Link</a> : null
                             }
                         </div>
