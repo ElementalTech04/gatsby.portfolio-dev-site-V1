@@ -5,6 +5,8 @@
   "author": "Hunter Chang",
   "dependencies": {
     "browser-monads": "^1.0.0",
+    "emailjs": "^2.2.0",
+    "emailjs-com": "^2.4.1",
     "gatsby": "^2.15.28",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.20",

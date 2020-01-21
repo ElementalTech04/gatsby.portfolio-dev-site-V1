@@ -9,13 +9,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
+        name: 'Frankie Rodriguez Portfolio',
         short_name: 'starter',
         start_url: '/',
         background_color: '#990815',
         theme_color: '#990815',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/rev-diamond.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
