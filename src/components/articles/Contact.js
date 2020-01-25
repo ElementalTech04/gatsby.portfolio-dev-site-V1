@@ -1,6 +1,7 @@
 import React from "react";
-import * as emailjs from 'emailjs-com';
 import {validate} from "../services/InputVal";
+
+const axios = require('axios').default;
 
 class Contact extends React.Component {
     static initState = {
@@ -38,7 +39,6 @@ class Contact extends React.Component {
         this.state = Contact.initState;
 
     }
-
 
     changeHandler = (event) => {
 
@@ -78,19 +78,21 @@ class Contact extends React.Component {
         for (let formElementId in this.state.formControls) {
             formData[formElementId] = this.state.formControls[formElementId].value;
         }
-
-        console.log(formData);
-
-        emailjs.send('portfolio_mail', 'contact_form_ok_website', formData, 'user_RwlJq8gNbzpFAvOUQJZ5a')
-            .then(res => {
-                console.log(res);
-            })
-            .catch(err => console.error('Failed to send feedback. Error: ', err))
-
+        this.sendFormData(formData);
         this.resetStateValues();
-
         alert("Form Submitted!");
     };
+
+    async sendFormData(formData){
+       const url = "https://elemental-email-api.herokuapp.com/notification/contactform";
+
+    const response = await axios.post(
+              url,
+              formData,
+              { headers: { 'Content-Type': 'application/json' } }
+            )
+       console.log(response.data)
+    }
 
     resetStateValues() {
         this.setState(Contact.initState);
