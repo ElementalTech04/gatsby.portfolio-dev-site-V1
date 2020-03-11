@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Hunter Chang",
   "dependencies": {
+    "axios": "^0.19.2",
     "browser-monads": "^1.0.0",
     "emailjs": "^2.2.0",
     "emailjs-com": "^2.4.1",
