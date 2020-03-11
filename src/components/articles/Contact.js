@@ -87,7 +87,7 @@ class Contact extends React.Component {
         const url = "https://elemental-email-api.herokuapp.com/notification/contactform";
 
         formData.appName = 'Frankie-Portfolio';
-        const response = await axios.post(
+        return await axios.post(
             url,
             formData,
             {headers: {'Content-Type': 'application/json'}}
