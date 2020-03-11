@@ -78,20 +78,20 @@ class Contact extends React.Component {
         for (let formElementId in this.state.formControls) {
             formData[formElementId] = this.state.formControls[formElementId].value;
         }
-        this.sendFormData(formData);
+        this.sendFormData(formData).then(r => console.log(r));
         this.resetStateValues();
         alert("Form Submitted!");
     };
 
-    async sendFormData(formData){
-       const url = "https://elemental-email-api.herokuapp.com/notification/contactform";
+    async sendFormData(formData) {
+        const url = "https://elemental-email-api.herokuapp.com/notification/contactform";
 
-    const response = await axios.post(
-              url,
-              formData,
-              { headers: { 'Content-Type': 'application/json' } }
-            )
-       console.log(response.data)
+        formData.appName = 'Frankie-Portfolio';
+        const response = await axios.post(
+            url,
+            formData,
+            {headers: {'Content-Type': 'application/json'}}
+        );
     }
 
     resetStateValues() {
