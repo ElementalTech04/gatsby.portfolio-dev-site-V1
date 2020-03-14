@@ -1,7 +1,7 @@
 import React from "react";
 import {validate} from "../services/InputVal";
-
-const axios = require('axios').default;
+import * as rax from 'retry-axios';
+import axios from 'axios';
 
 class Contact extends React.Component {
     static initState = {
@@ -87,6 +87,7 @@ class Contact extends React.Component {
         const url = "https://elemental-email-api.herokuapp.com/notification/contactform";
 
         formData.appName = 'Frankie-Portfolio';
+        rax.attach();
         return await axios.post(
             url,
             formData,
