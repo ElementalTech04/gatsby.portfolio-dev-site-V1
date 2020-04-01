@@ -102,7 +102,8 @@ class Contact extends React.Component {
     render() {
         return (<div>
             <h2 className="major">Contact</h2>
-            <form method="post" action="#" netlify>
+            <form name="contact" method="post" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact"/>
                 <div className="field half first">
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" id="name"
