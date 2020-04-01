@@ -3,6 +3,12 @@ import {validate} from "../services/InputVal";
 import * as rax from 'retry-axios';
 import axios from 'axios';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+};
+
 class Contact extends React.Component {
     static initState = {
         formControls: {
@@ -78,9 +84,14 @@ class Contact extends React.Component {
         for (let formElementId in this.state.formControls) {
             formData[formElementId] = this.state.formControls[formElementId].value;
         }
-        this.sendFormData(formData).then(r => console.log(r));
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...formData })
+        })
+            .then(() => alert("Form Submitted!"))
+            .catch(error => alert(error));
         this.resetStateValues();
-        alert("Form Submitted!");
     };
 
     async sendFormData(formData) {
@@ -102,7 +113,7 @@ class Contact extends React.Component {
     render() {
         return (<div>
             <h2 className="major">Contact</h2>
-            <form name="contact" method="post" data-netlify="true">
+            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.formSubmitHandler}>
                 <input type="hidden" name="form-name" value="contact"/>
                 <div className="field half first">
                     <label htmlFor="name">Name</label>
@@ -129,7 +140,7 @@ class Contact extends React.Component {
                 </div>
                 <ul className="actions">
                     <li>
-                        <input type="submit" value="Send Message" className="special" onClick={this.formSubmitHandler}
+                        <input type="submit" value="Send Message" className="special"
                                disabled={!(this.state.formControls.email.valid && this.state.formControls.name.valid)}/>
                     </li>
                     <li>
