@@ -102,7 +102,7 @@ class Contact extends React.Component {
     render() {
         return (<div>
             <h2 className="major">Contact</h2>
-            <form name="contact" method="post" data-netlify="true">
+            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.formSubmitHandler}>
                 <input type="hidden" name="form-name" value="contact"/>
                 <div className="field half first">
                     <label htmlFor="name">Name</label>
@@ -129,7 +129,7 @@ class Contact extends React.Component {
                 </div>
                 <ul className="actions">
                     <li>
-                        <input type="submit" value="Send Message" className="special" onClick={this.formSubmitHandler}
+                        <input type="submit" value="Send Message" className="special"
                                disabled={!(this.state.formControls.email.valid && this.state.formControls.name.valid)}/>
                     </li>
                     <li>
