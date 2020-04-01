@@ -3,6 +3,12 @@ import {validate} from "../services/InputVal";
 import * as rax from 'retry-axios';
 import axios from 'axios';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+};
+
 class Contact extends React.Component {
     static initState = {
         formControls: {
