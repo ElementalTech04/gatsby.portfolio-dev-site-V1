@@ -78,9 +78,14 @@ class Contact extends React.Component {
         for (let formElementId in this.state.formControls) {
             formData[formElementId] = this.state.formControls[formElementId].value;
         }
-        this.sendFormData(formData).then(r => console.log(r));
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...formData })
+        })
+            .then(() => alert("Form Submitted!"))
+            .catch(error => alert(error));
         this.resetStateValues();
-        alert("Form Submitted!");
     };
 
     async sendFormData(formData) {
